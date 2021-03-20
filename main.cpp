@@ -1,11 +1,10 @@
-#include <iostream>
-#include "ShortenPath.cpp"
-using namespace std;
+#include "ShortenPath.h"
 
 int main(void)
 {
     string testPath = "/foo/bar/../test/only";
-    cout << testPath.substr(0, testPath.find("\/.."));
-
+    string testPath2 = "/foo/../test/../test/../foo//bar/./baz";
+    string joined = shortenPath(testPath2);
+    cout << joined << endl;
     return 0;
 }
